@@ -1,0 +1,18 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'task' %}">&#8592; Atrás</a>
+</div>
+
+<div class="card-body">
+    <form action="" method="post">
+        {% csrf_token %}
+    
+        <p>¿Estás segur@ que quieres borrar esta tarea? - <b><i>{{task}}</i></b></p>
+        <input class="button" type="submit" value="Si, borrar">
+    </form>
+</div>
+
+{% endblock content %}
